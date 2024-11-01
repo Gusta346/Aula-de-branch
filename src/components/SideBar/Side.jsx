@@ -1,23 +1,33 @@
-import { Sidebar,Menu,MenuItem,SubMenu,sidebarClasses } from "react-pro-sidebar"
-import { Link } from "react-router-dom"
-
+import {Sidebar,Menu,MenuItem,SubMenu,sidebarClasses} from 'react-pro-sidebar'
+import {Link} from 'react-router-dom'
 
 export default function Side() {
   return (
-    <Sidebar>
+    <Sidebar
+    
+      rootStyles={{
+        [`.${sidebarClasses.container}`]:{
+          backgroundColor:"LIGHTblue", color:"#000"
+        },
+      }}
+
+    
+    >
       <Menu>
         <SubMenu label="Dashboard">
-          <MenuItem>Home</MenuItem>
-          <MenuItem>Exemplo-1</MenuItem>
-          <MenuItem>Exemplo-2</MenuItem>
+          <MenuItem component={<Link to="/"/>}>Home</MenuItem>
+          <MenuItem component={<Link to="/exemplo1"/>}>Exemplo-1</MenuItem>
+          <MenuItem component={<Link to="exemplo2"/>}>Exemplo-2</MenuItem>
         </SubMenu>
         <SubMenu label="Perfil">
-          <MenuItem>Sua conta</MenuItem>
+          <MenuItem>Sua Conta</MenuItem>
           <MenuItem>Avatar</MenuItem>
           <MenuItem>Sair</MenuItem>
+
         </SubMenu>
+
       </Menu>
+
     </Sidebar>
-    
   )
 }
