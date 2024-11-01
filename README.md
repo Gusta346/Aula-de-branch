@@ -9,3 +9,6 @@ git branch
 
 # extensão que cria estrutura do react (nutella)
 ES7+ React/Redux/React-Native snipp
+
+# Instalando dependencia de sidebar
+npm install react-pro-sidebar
